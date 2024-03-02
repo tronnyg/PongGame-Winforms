@@ -1,13 +1,13 @@
-﻿namespace PongGame
+﻿namespace PongGame.UserControls
 {
-    partial class frmMain
+    partial class ucGameScreen
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,63 +20,55 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.picPlayer2 = new System.Windows.Forms.PictureBox();
             this.picPlayer1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tmrTick = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // picPlayer2
             // 
             this.picPlayer2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.picPlayer2.Location = new System.Drawing.Point(1069, 341);
+            this.picPlayer2.Location = new System.Drawing.Point(1060, 334);
             this.picPlayer2.Name = "picPlayer2";
             this.picPlayer2.Size = new System.Drawing.Size(41, 115);
-            this.picPlayer2.TabIndex = 1;
+            this.picPlayer2.TabIndex = 2;
             this.picPlayer2.TabStop = false;
             // 
             // picPlayer1
             // 
             this.picPlayer1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.picPlayer1.Location = new System.Drawing.Point(39, 341);
+            this.picPlayer1.Location = new System.Drawing.Point(23, 334);
             this.picPlayer1.Name = "picPlayer1";
             this.picPlayer1.Size = new System.Drawing.Size(41, 115);
-            this.picPlayer1.TabIndex = 2;
+            this.picPlayer1.TabIndex = 5;
             this.picPlayer1.TabStop = false;
             // 
-            // pictureBox1
+            // tmrTick
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.SeaShell;
-            this.pictureBox1.Location = new System.Drawing.Point(397, 252);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.tmrTick.Tick += new System.EventHandler(this.tmrTick_Tick);
             // 
-            // frmMain
+            // ucGameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1150, 816);
-            this.Controls.Add(this.pictureBox1);
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.picPlayer1);
             this.Controls.Add(this.picPlayer2);
-            this.Name = "frmMain";
-            this.Text = "Pong";
+            this.Name = "ucGameScreen";
+            this.Size = new System.Drawing.Size(1123, 752);
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -85,7 +77,6 @@
 
         private System.Windows.Forms.PictureBox picPlayer2;
         private System.Windows.Forms.PictureBox picPlayer1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer tmrTick;
     }
 }
-
