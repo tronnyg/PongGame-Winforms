@@ -8,11 +8,13 @@ using System.Windows.Forms;
 
 namespace PongGame.src.Objects
 {
-    internal class pongBall: PictureBox
+    internal class PongBall: PictureBox
     {
         //===== BALL SPEED VARIABLES =====//
-        int ballxSpeed = 8;
-        int ballySpeed = 8;
+        int ballxDefSpeed = 5;
+        int ballyDefSpeed = 5;
+        int ballxSpeed = 5;
+        int ballySpeed = 5;
 
         //===== BALL LOCATION VARIABLES =====//
         int xMidpoint;
@@ -25,7 +27,7 @@ namespace PongGame.src.Objects
         int rightBoundry;
 
         //===== CONSTRUCTOR =====//
-        public pongBall(Size ballSize, Color ballColor, int WindowWidth, int WindowHeight)
+        public PongBall(Size ballSize, Color ballColor, int WindowWidth, int WindowHeight)
         {
             this.Size = ballSize;
             calcBoundary(WindowWidth, WindowHeight);
@@ -56,24 +58,34 @@ namespace PongGame.src.Objects
         {
             if (ballBottomHit())
             {
+                // Slow ball speed and reverse direction
                 ballySpeed *= -1;
+                ballxSpeed += 1;
             }
 
             if (ballTopHit())
             {
+                // Slow ball speed and reverse direction
                 ballySpeed *= -1;
+                ballxSpeed += 1;
             }
 
             if (ballLeftExit())
             {
+                // Reset ball location and speed
                 this.Top = yMidpoint;
                 this.Left = xMidpoint;
+                this.ballxSpeed = ballxDefSpeed;
+                this.ballySpeed = ballyDefSpeed;
             }
 
             if (ballRightExit())
             {
+                // Reset ball location and speed
                 this.Top = yMidpoint;
                 this.Left = xMidpoint;
+                this.ballxSpeed = ballxDefSpeed;
+                this.ballySpeed = ballyDefSpeed;
             }
         }
 
@@ -119,6 +131,20 @@ namespace PongGame.src.Objects
                 exit = true;
             }
             return exit;
+        }
+
+        //===== CHECK IF BALL HITS A PLAYER =====//
+        public void checkPlayerHit(Player player)
+        {
+            if (player.Bounds.IntersectsWith(this.Bounds))
+            {
+                // Reverse ball direction
+                this.ballxSpeed *= -1;
+                // Incresase speed based on player bounce level
+                if (this.ballxSpeed < 0)
+                {this.ballxSpeed -= player.PlayerBounceLvl;}
+                else { this.ballxSpeed += player.PlayerBounceLvl; }
+            }
         }
 
     }

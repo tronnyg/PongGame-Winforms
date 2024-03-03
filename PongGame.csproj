@@ -54,7 +54,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\Objects\pongBall.cs">
+    <Compile Include="src\Events\KeyboardEvents.cs" />
+    <Compile Include="src\Objects\Player.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\Objects\PongBall.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Views\UserControls\ucGameScreen.cs">
