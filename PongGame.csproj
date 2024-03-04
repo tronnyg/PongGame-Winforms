@@ -79,6 +79,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\UserControls\ucGameScreen.aa.resx">
+      <DependentUpon>ucGameScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\ucGameScreen.resx">
       <DependentUpon>ucGameScreen.cs</DependentUpon>
     </EmbeddedResource>

@@ -45,12 +45,25 @@ namespace PongGame.UserControls
             // Move ball 
             newBall.moveBall();
             // Check if ball hit any borders
+            updateScore();
             newBall.checkBoundries(); 
             // Check if ball hits players
             newBall.checkPlayerHit(player1); 
             newBall.checkPlayerHit(player2);
             keyboardEvents.playerOutput(player1,player2);
 
+        }
+
+        //===== UPDATE PLAYER SCORE =====//
+        private void updateScore()
+        {
+            if (newBall.ballRightExit())
+            { player1.PlayerScore++; }
+            else if (newBall.ballLeftExit())
+            { player2.PlayerScore++; }
+
+            lblPlayer1.Text = player1.PlayerScore.ToString();
+            lblPlayer2.Text = player2.PlayerScore.ToString();
         }
 
         //===== KEY DOWN EVENTS =====//

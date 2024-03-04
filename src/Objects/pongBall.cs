@@ -112,7 +112,7 @@ namespace PongGame.src.Objects
         }
 
         //===== CHECK IF BALL EXITS LEFT SIDE OF WINDOW =====//
-        private bool ballLeftExit()
+        public bool ballLeftExit()
         {
             bool exit = false;
             if (this.Left <= leftBoundry)
@@ -123,7 +123,7 @@ namespace PongGame.src.Objects
         }
 
         //===== CHECK IF BALL EXITS RIGHT SIDE OF WINDOW =====//
-        private bool ballRightExit()
+        public bool ballRightExit()
         {
             bool exit = false;
             if (this.Left >= rightBoundry)
