@@ -27,8 +27,8 @@ namespace PongGame.UserControls
 
             // Create ball and players and add to control
             newBall = new PongBall(new Size(35, 35), Color.White, this.Width, this.Height);
-            player1 = new Player(new Size(41, 115),Color.WhiteSmoke, new Point(50, 334),10,1,"Player 1", this.Height, this.Width);
-            player2 = new Player(new Size(41, 115),Color.WhiteSmoke, new Point(1023, 334),10,1, "Player 2", this.Height, this.Width);
+            player1 = new Player(new Size(41, 115),Color.WhiteSmoke, new Point(50, 334),10,2,"Player 1", this.Height, this.Width);
+            player2 = new Player(new Size(41, 115),Color.WhiteSmoke, new Point(1023, 334),10,2, "Player 2", this.Height, this.Width);
             this.Controls.Add(this.newBall);
             this.Controls.Add(player1);
             this.Controls.Add(player2);

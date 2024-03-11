@@ -63,6 +63,7 @@
             // tableLayoutPanel1
             // 
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.Controls.Add(this.lblPlayer1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblPlayer2, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblCenter, 1, 0);

@@ -26,6 +26,11 @@ namespace PongGame.src.Objects
         int leftBoundry;
         int rightBoundry;
 
+        public int BottomBoundry { get => bottomBoundry; set => bottomBoundry = value; }
+        public int TopBoundry { get => topBoundry; set => topBoundry = value; }
+        public int LeftBoundry { get => leftBoundry; set => leftBoundry = value; }
+        public int RightBoundry { get => rightBoundry; set => rightBoundry = value; }
+
         //===== CONSTRUCTOR =====//
         public PongBall(Size ballSize, Color ballColor, int WindowWidth, int WindowHeight)
         {
@@ -40,10 +45,10 @@ namespace PongGame.src.Objects
         {
             xMidpoint = Width / 2;
             yMidpoint = Height / 2;
-            bottomBoundry = Height - 30;
-            topBoundry = 0;
-            leftBoundry = 0;
-            rightBoundry = Width - 30;
+            BottomBoundry = Height - 30;
+            TopBoundry = 0;
+            LeftBoundry = 20;
+            RightBoundry = Width - 20;
         }
 
         //===== MOVE BALL =====//
@@ -58,16 +63,20 @@ namespace PongGame.src.Objects
         {
             if (ballBottomHit())
             {
-                // Slow ball speed and reverse direction
+                // Slow ball speed and reverse direction 
+                if (this.ballxSpeed < 0)
+                {ballxSpeed += 1;}
+                else { ballxSpeed -= 1; }
                 ballySpeed *= -1;
-                ballxSpeed += 1;
             }
 
             if (ballTopHit())
             {
                 // Slow ball speed and reverse direction
+                if (this.ballxSpeed < 0)
+                { ballxSpeed += 1; }
+                else { ballxSpeed -= 1; }
                 ballySpeed *= -1;
-                ballxSpeed += 1;
             }
 
             if (ballLeftExit())
@@ -93,7 +102,7 @@ namespace PongGame.src.Objects
         private bool ballBottomHit()
         {
             bool hit = false;
-            if (this.Top >= bottomBoundry)
+            if (this.Top >= BottomBoundry)
             {
                 hit = true;
             }
@@ -104,7 +113,7 @@ namespace PongGame.src.Objects
         private bool ballTopHit()
         {
             bool hit = false;
-            if (this.Top <= topBoundry)
+            if (this.Top <= TopBoundry)
             {
                 hit = true;
             }
@@ -115,7 +124,7 @@ namespace PongGame.src.Objects
         public bool ballLeftExit()
         {
             bool exit = false;
-            if (this.Left <= leftBoundry)
+            if (this.Left <= LeftBoundry)
             {
                 exit = true;
             }
@@ -126,7 +135,7 @@ namespace PongGame.src.Objects
         public bool ballRightExit()
         {
             bool exit = false;
-            if (this.Left >= rightBoundry)
+            if (this.Left >= RightBoundry)
             {
                 exit = true;
             }
@@ -138,6 +147,11 @@ namespace PongGame.src.Objects
         {
             if (player.Bounds.IntersectsWith(this.Bounds))
             {
+                // To ensure the ball doesnt phase through bounds of player paddle
+                if (player.PlayerName == "Player 1")
+                { this.Left = player.Right; Console.WriteLine("player1"); }
+                if (player.PlayerName == "Player 2")
+                { this.Left = player.Left - 35; Console.WriteLine("player2"); }
                 // Reverse ball direction
                 this.ballxSpeed *= -1;
                 // Incresase speed based on player bounce level

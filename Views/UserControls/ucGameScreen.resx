@@ -139,7 +139,7 @@
     <value>0, 10, 0, 0</value>
   </data>
   <data name="lblPlayer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 33</value>
+    <value>87, 33</value>
   </data>
   <data name="lblPlayer1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -172,13 +172,13 @@
     <value>AngryBirdsPixela, 26.25pt, style=Bold</value>
   </data>
   <data name="lblPlayer2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>112, 10</value>
+    <value>111, 10</value>
   </data>
   <data name="lblPlayer2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 10, 0, 0</value>
   </data>
   <data name="lblPlayer2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 33</value>
+    <value>89, 33</value>
   </data>
   <data name="lblPlayer2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -211,7 +211,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="lblCenter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 0</value>
+    <value>87, 0</value>
   </data>
   <data name="lblCenter.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -271,7 +271,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="lblPlayer1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblPlayer2" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="lblCenter" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,77,87611,Percent,22,12389,Absolute,87" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="lblPlayer1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblPlayer2" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="lblCenter" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,77,87611,Percent,22,12389,Absolute,88" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -283,7 +283,7 @@
     <value>GrowAndShrink</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1117, 746</value>
+    <value>1115, 744</value>
   </data>
   <data name="&gt;&gt;tmrTick.Name" xml:space="preserve">
     <value>tmrTick</value>
